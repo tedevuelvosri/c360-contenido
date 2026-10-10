@@ -48,61 +48,55 @@ def foot(right="DESLIZA →", light=False):
 def card(n,t,d,extra=""): return f'<div class="card" {extra}><div class="n">{n}</div><div><h3>{t}</h3><p>{d}</p></div></div>'
 CTA = "Envíanos tu RUC por mensaje directo"
 
-# ---------------- POSTS (1080x1350) · SEMANA 2 ----------------
+# ---------------- POSTS (1080x1350) · SEMANA 3 ----------------
 P = {}
-P["w2a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<div class="tag">Contabilidad bajo NIIF</div>
-<h1 style="font-size:92px">¿Tus estados financieros te <span class="hl">abren puertas</span> o te las cierran?</h1>
-<p class="lead">Bancos, socios e inversionistas deciden con base en tus números.</p>
+P["w3a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<div class="tag">Control contable</div>
+<h1 style="font-size:96px">¿Tu contabilidad cuadra con tu <span class="hl">banco?</span></h1>
+<p class="lead">La conciliación bancaria es el primer control de unos estados financieros confiables.</p>
 {foot()}</div>"""
-P["w2a_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
-<div class="tag">Antes de un crédito</div>
-<h2 style="margin-bottom:6px">Lo que un banco <span class="hl">mira primero</span></h2>
-{card("01","Estados financieros consistentes","Que lo que muestras al banco coincida con lo declarado al SRI.")}
-{card("02","Flujo de caja que respalde el pago","No basta con vender: hay que demostrar liquidez.")}
-{card("03","Cumplimiento al día","Balances presentados a la Supercías y sin obligaciones pendientes.")}
+P["w3a_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
+<div class="tag">Qué es conciliar</div>
+<h2 style="margin-bottom:6px">Comparar, explicar y <span class="hl">corregir</span></h2>
+{card("01","Libros vs. estado de cuenta","Cada mes, al cierre, se comparan ambos saldos.")}
+{card("02","Explicar cada diferencia","Cheques en tránsito, depósitos no registrados, comisiones.")}
+{card("03","Corregir y documentar","Cada partida pendiente, con su sustento.")}
 {foot(light=True)}</div>"""
-def col(title,items,hi=False):
-    bg = "background:#0B1F6E;color:#FDFEFF;border-color:#0B1F6E" if hi else ""
-    li = "".join(f'<p style="font-size:30px;line-height:1.35;padding:16px 0;border-top:2px solid {"rgba(255,255,255,.15)" if hi else "#E1E7F5"};{"color:#C9D2E0" if hi else ""}">{i}</p>' for i in items)
-    return f'<div class="card" style="flex:1;flex-direction:column;gap:6px;{bg}"><h3 style="{"color:#5FE0E0" if hi else ""};margin-bottom:12px">{title}</h3>{li}</div>'
-P["w2a_3"] = f"""<div class="s light" style="gap:34px;justify-content:center">
-<div class="tag">La diferencia</div>
-<h2>Contabilidad para declarar vs. <span class="hl">para decidir</span></h2>
-<div style="display:flex;gap:24px">
-{col("Para declarar",["Registra lo que ya pasó","Se arma a fin de mes","Su meta es cumplir con el SRI"])}
-{col("Para decidir",["Conciliada y bajo NIIF","Reportes mensuales para gerencia","Flujo de caja proyectado"],True)}
-</div>
+P["w3a_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">Señales de alerta</div>
+<h2 style="margin-bottom:6px">Si ves esto, <span class="hl">algo no cuadra</span></h2>
+{card("01","Partidas pendientes de hace meses","Diferencias que nadie explicó y siguen ahí.")}
+{card("02","Depósitos sin identificar","Ingresos que no sabes de dónde vienen.")}
+{card("03","Comisiones sin registrar","Gastos bancarios que no aparecen en tus libros.")}
+{card("04","Conciliación “cuando hay tiempo”","Si no es mensual, los errores se acumulan.")}
 {foot(light=True)}</div>"""
-P["w2a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:84px">Números claros para <span class="hl">decidir con confianza.</span></h2>
+P["w3a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:80px">Sin conciliación, tu flujo de caja es <span class="hl">una suposición.</span></h2>
 <p class="lead">Empieza por un diagnóstico preventivo sin costo: reporte en 24 horas, solo con tu RUC.</p>
 <div class="cta">{CTA}</div>
 {foot("GUARDA ESTE POST")}</div>"""
 
-P["w2b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<div class="tag">Dirección financiera</div>
-<h1 style="font-size:96px">¿Necesitas un contador o un <span class="hl">CFO externo?</span></h1>
-<p class="lead">La diferencia está en mirar hacia atrás o hacia adelante.</p>
+P["w3b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<div class="tag">Gestión financiera</div>
+<h1 style="font-size:96px">5 indicadores que deberías ver <span class="hl">cada mes</span></h1>
+<p class="lead">Sin ellos, las decisiones se toman con intuición y no con números.</p>
 {foot()}</div>"""
-P["w2b_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
-<div class="tag">Contabilidad tradicional</div>
-<h2 style="margin-bottom:6px">Cumple. <span class="hl">Y es necesaria.</span></h2>
-{card("01","Registra facturas y movimientos","Mantiene los libros al día.")}
-{card("02","Declara a tiempo","IVA, retenciones, ATS y renta.")}
-{card("03","Reacciona","Atiende las notificaciones cuando llegan.")}
+P["w3b_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
+<div class="tag">Rentabilidad</div>
+<h2 style="margin-bottom:6px">¿Tu negocio <span class="hl">gana dinero?</span></h2>
+{card("01","Margen bruto","Cuánto queda de cada venta después del costo directo.")}
+{card("02","Margen neto","Lo que realmente queda después de gastos e impuestos.")}
 {foot(light=True)}</div>"""
-P["w2b_3"] = f"""<div class="s light" style="gap:26px;justify-content:center">
-<div class="tag">CFO externo</div>
-<h2 style="margin-bottom:6px">Además, <span class="hl">dirige.</span></h2>
-{card("01","Analiza rentabilidad y flujo de caja","Sabes qué línea de negocio deja dinero.")}
-{card("02","Planifica impuestos de forma legal","Ahorro tributario dentro de la norma.")}
-{card("03","Anticipa contingencias","Corrige antes de que llegue la notificación.")}
-{card("04","Se sienta con gerencia","Reunión mensual de resultados.")}
+P["w3b_3"] = f"""<div class="s light" style="gap:26px;justify-content:center">
+<div class="tag">Liquidez</div>
+<h2 style="margin-bottom:6px">¿Tienes <span class="hl">caja para operar?</span></h2>
+{card("03","Liquidez corriente","Activo corriente ÷ pasivo corriente.")}
+{card("04","Días de cobro","Cuánto tardan tus clientes en pagarte.")}
+{card("05","Días de pago","Cuánto tardas tú en pagar a tus proveedores.")}
 {foot(light=True)}</div>"""
-P["w2b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:84px">En Contabilidad360 hacemos <span class="hl">las dos cosas.</span></h2>
-<p class="lead">Cumplimiento impecable y visión de dirección financiera, con atención directa de la socia fundadora.</p>
+P["w3b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:80px">Indicadores confiables necesitan <span class="hl">contabilidad confiable.</span></h2>
+<p class="lead">Conciliada, bajo NIIF y con reportes mensuales para gerencia.</p>
 <div class="cta">{CTA}</div>
 {foot("SÍGUENOS")}</div>"""
 
@@ -113,34 +107,35 @@ def due(d,date,note=""):
     return (f'<div style="background:#FDFEFF;border-radius:26px;padding:30px 36px;display:flex;justify-content:space-between;align-items:center">'
             f'<div><span style="font-size:32px;color:#5a5f68">Dígito <b class="mono" style="color:#0B1F6E;font-size:56px">{d}</b></span>{n}</div>'
             f'<span class="mono" style="font-size:48px;color:#2E8FD1">{date}</span></div>')
-S["w2s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
-<div class="tag">Calendario SRI · Esta semana</div>
-<h2 style="font-size:76px">Vencen <span class="hl">IVA y retenciones</span> para estos dígitos</h2>
-{due("4","vie 16 oct")}
-{due("5","lun 19 oct","El 18 cae domingo: pasa al lunes")}
-{due("6","mar 20 oct")}
+S["w3s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:24px;padding-bottom:360px">
+<div class="tag">Calendario SRI · Próximos días</div>
+<h2 style="font-size:68px">Vencen <span class="hl">IVA y retenciones</span> para estos dígitos</h2>
+{due("7","jue 22 oct","Hoy")}
+{due("8","lun 26 oct","El 24 cae sábado: pasa al lunes")}
+{due("9","lun 26 oct")}
+{due("0","mié 28 oct")}
 <p class="lead" style="font-size:30px">Noveno dígito del RUC. Declarar tarde genera multas e intereses.</p>
 {foot("")}</div>"""
-S["w2s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+S["w3s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
 <div class="tag">Pregunta para gerentes</div>
-<h2 style="font-size:84px">¿Sabes hoy cuánto <span class="hl">flujo de caja</span> tendrás en 3 meses?</h2>
-<p class="lead">Si la respuesta es no, tus números te están diciendo menos de lo que podrían.</p>
+<h2 style="font-size:80px">Si el año cerrara hoy, ¿sabrías cuánto pagarías de <span class="hl">Impuesto a la Renta?</span></h2>
+<p class="lead">El ejercicio fiscal cierra el 31 de diciembre. Todavía hay tiempo para planificar, dentro de la norma.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Conversemos por mensaje directo</div>
 {foot("", light=True)}</div>"""
-mini = "".join(f'<div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.08);border-radius:20px;padding:26px 32px">'
-               f'<span style="font-size:34px">{t}</span><span class="mono" style="color:#5FE0E0;font-size:30px">✓</span></div>'
-               for t in ["Declaraciones IVA y Renta","Cumplimiento Supercías","Anexo Transaccional (ATS)","Nómina y aportes IESS"])
-S["w2s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
-<div class="tag">Diagnóstico preventivo</div>
-<h2 style="font-size:80px">Tu reporte en <span class="hl">24 horas</span> revisa:</h2>
-<div style="display:flex;flex-direction:column;gap:16px">{mini}</div>
-<p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p>
+S["w3s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
+<div class="tag">Mito vs. realidad</div>
+<div style="background:rgba(255,255,255,.08);border-radius:26px;padding:36px 40px">
+<p class="mono" style="color:#8A8D91;font-size:28px;letter-spacing:.12em;margin-bottom:14px">MITO</p>
+<p style="font-family:M;font-weight:800;font-size:52px;line-height:1.2">“Si el SRI no me ha notificado, todo está bien.”</p></div>
+<div style="background:#FDFEFF;color:#0B1F6E;border-radius:26px;padding:36px 40px">
+<p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">REALIDAD</p>
+<p style="font-family:M;font-weight:800;font-size:46px;line-height:1.25">Las diferencias se acumulan en silencio. Revisar antes cuesta menos que corregir después.</p></div>
 <div class="cta">{CTA}</div>
 {foot("")}</div>"""
-S["w2s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
-<div class="tag">Dirección financiera</div>
-<h2 style="font-size:86px">¿Contador o <span class="hl">CFO externo?</span></h2>
-<p class="lead">Te explicamos la diferencia, y por qué tu empresa podría necesitar las dos cosas.</p>
+S["w3s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+<div class="tag">Gestión financiera</div>
+<h2 style="font-size:86px">5 indicadores que deberías ver <span class="hl">cada mes</span></h2>
+<p class="lead">Rentabilidad y liquidez, explicadas sin jerga.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Míralo en el perfil</div>
 {foot("", light=True)}</div>"""
 
