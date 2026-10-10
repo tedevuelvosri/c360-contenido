@@ -49,9 +49,10 @@ IVA y retenciones mensuales vencen según el 9.º dígito del RUC: 1→10, 2→1
 ## Temas ya publicados (no repetir; ampliar esta lista cada semana)
 - Sem. 07-oct: Presentación de marca · Diagnóstico preventivo (3 pasos) · 5 contingencias frecuentes (ATS vs IVA, gastos sin sustento, retenciones, Supercías atrasada, nómina vs IESS) · Historias: calendario IVA octubre, noveno dígito del RUC, diagnóstico, contingencia #1.
 - Sem. 14-oct: Reel “¿Qué puede ver cualquiera con el RUC de tu empresa?” · Carrusel “Qué mira un banco antes de un crédito / contabilidad para declarar vs para decidir” · Carrusel “¿Contador o CFO externo?” · Historias: vencimientos semana (dígitos 4-6), pregunta flujo de caja, qué revisa el diagnóstico, adelanto CFO.
+- Sem. 21-oct: Reel “Tu Impuesto a la Renta se decide antes del 31 de diciembre” (cierre fiscal: proyectar utilidad, comprobantes válidos, conciliar retenciones/crédito tributario) · Carrusel “Conciliación bancaria: señales de alerta” · Carrusel “5 indicadores financieros para gerencia” (márgenes bruto/neto, liquidez corriente, días de cobro/pago) · Historias: vencimientos dígitos 7-0 (24-oct sábado → lun 26), pregunta renta si el año cerrara hoy, mito “si el SRI no me notificó estoy bien”, adelanto indicadores.
 
 ## Ideas de temas pendientes
-Cierre fiscal y planificación de renta antes de diciembre · Décimo tercer sueldo (verificar fecha) · Conciliaciones bancarias · Gastos personales deducibles (verificar reglas vigentes) · Convenios de doble tributación EC-PE-CO · Qué es una glosa del SRI · Informe de comisario · Fondos de reserva · Flujo de caja proyectado · Errores al facturar electrónicamente (desde el punto de vista contable, sin vender firmas) · Preparación ante una fiscalización · KPIs financieros para gerencia.
+Décimo tercer sueldo (verificar fecha) · Gastos personales deducibles (verificar reglas vigentes) · Convenios de doble tributación EC-PE-CO · Qué es una glosa del SRI · Informe de comisario · Fondos de reserva · Flujo de caja proyectado · Errores al facturar electrónicamente (desde el punto de vista contable, sin vender firmas) · Preparación ante una fiscalización.
 
 ## Cierre de cada ejecución
 1. Verificar con `getScheduledPosts` que todo quedó programado (fechas, tipo, draft false).
