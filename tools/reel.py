@@ -8,11 +8,11 @@ FPS=30; DUR=24
 # scenes: (start,end,html)
 def sc(a,b,html): return f'<div class="scene" style="--a:{a}s;--d:{b-a}s">{html}</div>'
 SC = [
- sc(0,4.2,'<div class="tag">Cierre fiscal 2026</div><h1 style="font-size:100px">Tu Impuesto a la Renta se decide <span class="hl">antes del 31 de diciembre</span></h1>'),
- sc(4.2,7.8,'<div class="num">01</div><h2 style="font-size:84px">Proyecta tu utilidad con <span class="hl">números conciliados</span></h2>'),
- sc(7.8,11.4,'<div class="num">02</div><h2 style="font-size:84px">Revisa que cada gasto tenga <span class="hl">comprobante válido</span></h2><p class="lead">Sin sustento, no es deducible.</p>'),
- sc(11.4,15,'<div class="num">03</div><h2 style="font-size:84px">Concilia tus retenciones y tu <span class="hl">crédito tributario</span></h2>'),
- sc(15,18.6,'<h2 style="font-size:84px">En enero solo queda declarar. <span class="hl">Hoy todavía se puede planificar.</span></h2>'),
+ sc(0,4.2,'<div class="tag">Nómina · Diciembre 2026</div><h1 style="font-size:96px">El décimo tercer sueldo no debería <span class="hl">sorprenderte en diciembre</span></h1>'),
+ sc(4.2,8.2,'<div class="num">01</div><h2 style="font-size:78px">Se calcula con lo percibido del <span class="hl">1 de diciembre al 30 de noviembre</span></h2><p class="lead">Es la doceava parte de lo recibido en ese período.</p>'),
+ sc(8.2,12,'<div class="num">02</div><h2 style="font-size:84px">Se paga <span class="hl">hasta el 24 de diciembre</span></h2><p class="lead">Si tu equipo lo recibe mensualizado, ya va en cada rol de pagos.</p>'),
+ sc(12,15.6,'<div class="num">03</div><h2 style="font-size:84px">Provisiónalo <span class="hl">cada mes</span> en tu contabilidad</h2><p class="lead">Así diciembre no golpea tu flujo de caja.</p>'),
+ sc(15.6,18.6,'<h2 style="font-size:84px">Nómina bien calculada, IESS al día y <span class="hl">caja planificada.</span></h2>'),
  sc(18.6,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus números en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
 ]
 EXTRA = """
@@ -47,6 +47,6 @@ async def main():
         await b.close()
     subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate",str(FPS),"-i",str(out/"f%04d.png"),
       "-f","lavfi","-i","anullsrc=r=44100:cl=stereo","-shortest","-c:v","libx264","-pix_fmt","yuv420p","-crf","20",
-      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r2.mp4")],check=True)
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r2.mp4"),"-frames:v","1",str(ROOT/"out"/"r2_cover.jpg")])
+      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r3.mp4")],check=True)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r3.mp4"),"-frames:v","1",str(ROOT/"out"/"r3_cover.jpg")])
 asyncio.run(main())
