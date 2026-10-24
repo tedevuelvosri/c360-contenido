@@ -8,11 +8,11 @@ FPS=30; DUR=24
 # scenes: (start,end,html)
 def sc(a,b,html): return f'<div class="scene" style="--a:{a}s;--d:{b-a}s">{html}</div>'
 SC = [
- sc(0,4.2,'<div class="tag">Nómina · Diciembre 2026</div><h1 style="font-size:96px">El décimo tercer sueldo no debería <span class="hl">sorprenderte en diciembre</span></h1>'),
- sc(4.2,8.2,'<div class="num">01</div><h2 style="font-size:78px">Se calcula con lo percibido del <span class="hl">1 de diciembre al 30 de noviembre</span></h2><p class="lead">Es la doceava parte de lo recibido en ese período.</p>'),
- sc(8.2,12,'<div class="num">02</div><h2 style="font-size:84px">Se paga <span class="hl">hasta el 24 de diciembre</span></h2><p class="lead">Si tu equipo lo recibe mensualizado, ya va en cada rol de pagos.</p>'),
- sc(12,15.6,'<div class="num">03</div><h2 style="font-size:84px">Provisiónalo <span class="hl">cada mes</span> en tu contabilidad</h2><p class="lead">Así diciembre no golpea tu flujo de caja.</p>'),
- sc(15.6,18.6,'<h2 style="font-size:84px">Nómina bien calculada, IESS al día y <span class="hl">caja planificada.</span></h2>'),
+ sc(0,4.2,'<div class="tag">Nómina · IESS</div><h1 style="font-size:92px">Fondos de reserva: lo que todo empleador <span class="hl">debe tener claro</span></h1>'),
+ sc(4.2,8.2,'<div class="num">01</div><h2 style="font-size:80px">Se generan <span class="hl">después del primer año</span> de trabajo</h2><p class="lead">Cuando el trabajador supera un año con el mismo empleador.</p>'),
+ sc(8.2,12,'<div class="num">02</div><h2 style="font-size:84px">Equivalen al <span class="hl">8,33%</span> de la remuneración</h2><p class="lead">Una doceava parte, cada mes.</p>'),
+ sc(12,15.6,'<div class="num">03</div><h2 style="font-size:80px">En el rol de pagos <span class="hl">o en el IESS</span></h2><p class="lead">Según lo que elija el trabajador: mensualizados o acumulados.</p>'),
+ sc(15.6,18.6,'<h2 style="font-size:84px">Bien calculados, provisionados y <span class="hl">al día.</span></h2>'),
  sc(18.6,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus números en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
 ]
 EXTRA = """
@@ -47,6 +47,6 @@ async def main():
         await b.close()
     subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate",str(FPS),"-i",str(out/"f%04d.png"),
       "-f","lavfi","-i","anullsrc=r=44100:cl=stereo","-shortest","-c:v","libx264","-pix_fmt","yuv420p","-crf","20",
-      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r3.mp4")],check=True)
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r3.mp4"),"-frames:v","1",str(ROOT/"out"/"r3_cover.jpg")])
+      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r4.mp4")],check=True)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r4.mp4"),"-frames:v","1",str(ROOT/"out"/"r4_cover.jpg")])
 asyncio.run(main())

@@ -48,57 +48,55 @@ def foot(right="DESLIZA →", light=False):
 def card(n,t,d,extra=""): return f'<div class="card" {extra}><div class="n">{n}</div><div><h3>{t}</h3><p>{d}</p></div></div>'
 CTA = "Envíanos tu RUC por mensaje directo"
 
-# ---------------- POSTS (1080x1350) · SEMANA 4 (28-oct) ----------------
+# ---------------- POSTS (1080x1350) · SEMANA 5 (04-nov) ----------------
 P = {}
-P["w4a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+P["w5a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
 <div class="tag">Prevención tributaria</div>
-<h1 style="font-size:92px">Llegó una notificación del SRI. <span class="hl">¿Y ahora?</span></h1>
-<p class="lead">Cómo respondas define cuánto te cuesta. Esto es lo que conviene hacer, y lo que no.</p>
+<h1 style="font-size:96px">¿Qué es una <span class="hl">glosa</span> del SRI?</h1>
+<p class="lead">Y por qué se previene en el registro de cada día, no cuando llega el control.</p>
 {foot()}</div>"""
-P["w4a_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
-<div class="tag">Antes de responder</div>
-<h2 style="margin-bottom:6px">Tres pasos <span class="hl">con calma</span></h2>
-{card("01","Lee qué piden y el plazo","Exactamente qué información y hasta cuándo.")}
-{card("02","Reúne el sustento","Comprobantes, contratos, conciliaciones y registros.")}
-{card("03","Cruza las cifras","Declaraciones, ATS y contabilidad deben contar la misma historia.")}
+P["w5a_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
+<div class="tag">En simple</div>
+<h2>Una diferencia que el SRI <span class="hl">determina</span> en tus declaraciones</h2>
+<p class="lead">Surge tras un proceso de control: un ingreso que no declaraste, un gasto que considera no deducible o un crédito tributario sin sustento.</p>
+<div class="card"><div class="n">=</div><div><h3>¿Qué implica?</h3><p>Impuesto adicional, intereses y posibles multas.</p></div></div>
 {foot(light=True)}</div>"""
-P["w4a_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
-<div class="tag">Errores que encarecen</div>
-<h2 style="margin-bottom:6px">Lo que <span class="hl">no</span> debes hacer</h2>
-{card("01","Responder fuera de plazo","El tiempo corre desde la notificación.")}
-{card("02","Entregar información incompleta","Datos sueltos o contradictorios abren más preguntas.")}
-{card("03","Ignorar la notificación","No desaparece: el proceso sigue sin tu versión.")}
-{card("04","Corregir sin entender el origen","Sin saber de dónde viene la diferencia, se repite.")}
+P["w5a_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">De dónde suelen salir</div>
+<h2 style="margin-bottom:6px">Cuatro orígenes <span class="hl">frecuentes</span></h2>
+{card("01","Gastos sin sustento","Sin comprobante válido o sin el medio de pago que exige la norma.")}
+{card("02","Cifras que no cuadran","ATS, declaraciones y contabilidad con valores distintos.")}
+{card("03","Retenciones mal aplicadas","No efectuadas, con porcentaje errado o sin declarar.")}
+{card("04","Ingresos no declarados","Detectados por cruces de información del SRI.")}
 {foot(light=True)}</div>"""
-P["w4a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:80px">La mejor respuesta al SRI se prepara <span class="hl">antes de que llegue.</span></h2>
+P["w5a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:80px">Una glosa se previene en el <span class="hl">día a día</span>, no en la respuesta al SRI.</h2>
 <p class="lead">Diagnóstico preventivo sin costo: reporte en 24 horas, solo con tu RUC y sin claves.</p>
 <div class="cta">{CTA}</div>
 {foot("GUARDA ESTE POST")}</div>"""
 
-P["w4b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<div class="tag">Flujo de caja</div>
-<h1 style="font-size:96px">¿Sabes cuánta caja tendrás en <span class="hl">90 días?</span></h1>
-<p class="lead">Un flujo de caja proyectado te avisa antes de que falte dinero, no después.</p>
+P["w5b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:44px">
+<div class="tag">Visión regional · EC · PE · CO</div>
+<h1 style="font-size:84px">¿Tu empresa opera en Ecuador, Perú o Colombia?</h1>
+<p class="lead">La <b style="color:#5FE0E0">Decisión 578 de la CAN</b> evita que pagues dos veces impuesto por la misma renta.</p>
 {foot()}</div>"""
-P["w4b_2"] = f"""<div class="s light" style="gap:30px;justify-content:center">
-<div class="tag">Cómo armarlo</div>
-<h2 style="margin-bottom:6px">Tres bases <span class="hl">realistas</span></h2>
-{card("01","Parte del saldo real","El saldo bancario conciliado, no el estimado.")}
-{card("02","Proyecta cobros reales","Con tus días de cobro reales, no con lo facturado.")}
-{card("03","Proyecta todos los pagos","Proveedores, nómina, impuestos y obligaciones financieras.")}
+P["w5b_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
+<div class="tag">Qué es</div>
+<h2>El régimen andino contra la <span class="hl">doble tributación</span></h2>
+<p class="lead">Aplica entre los países miembros de la Comunidad Andina: Bolivia, Colombia, Ecuador y Perú.</p>
+<div class="card"><div class="n">→</div><div><h3>Regla general</h3><p>La renta tributa solo en el país donde se genera. El otro país la considera exonerada.</p></div></div>
 {foot(light=True)}</div>"""
-P["w4b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
-<div class="tag">Pagos que se olvidan</div>
-<h2 style="margin-bottom:6px">Los que <span class="hl">desordenan la caja</span></h2>
-{card("01","Décimo tercer sueldo","Se paga hasta el 24 de diciembre.")}
-{card("02","Impuesto a la Renta anual","El resultado del año también sale de caja.")}
-{card("03","Cuotas de préstamos","Capital e intereses, mes a mes.")}
-{card("04","IVA y retenciones","Vencimientos mensuales según tu RUC.")}
+P["w5b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">Reglas que conviene conocer</div>
+<h2 style="margin-bottom:6px">¿Dónde <span class="hl">tributa</span> cada renta?</h2>
+{card("01","Dividendos","En el país donde está domiciliada la empresa que los distribuye.")}
+{card("02","Intereses","En el país donde se imputa y registra su pago.")}
+{card("03","Servicios personales","Incluida la consultoría: donde se prestaron.")}
+{card("04","Transporte","En el país donde está domiciliada la empresa.")}
 {foot(light=True)}</div>"""
-P["w4b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:80px">Proyectar no es adivinar: <span class="hl">es decidir con anticipación.</span></h2>
-<p class="lead">Actualízalo cada mes con tu contabilidad cerrada y conciliada.</p>
+P["w5b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:78px">Operar en la región es una oportunidad <span class="hl">si se planifica.</span></h2>
+<p class="lead">Revisa cada operación y su sustento antes de facturar o pagar entre países.</p>
 <div class="cta">{CTA}</div>
 {foot("SÍGUENOS")}</div>"""
 
@@ -108,37 +106,36 @@ def due(d,date,note=""):
     n = f'<p style="font-size:26px;color:#8A8D91;margin-top:6px">{note}</p>' if note else ""
     return (f'<div style="background:#FDFEFF;border-radius:26px;padding:30px 36px;display:flex;justify-content:space-between;align-items:center">'
             f'<div><span style="font-size:32px;color:#5a5f68">Dígito <b class="mono" style="color:#0B1F6E;font-size:56px">{d}</b></span>{n}</div>'
-            f'<span class="mono" style="font-size:48px;color:#2E8FD1">{date}</span></div>')
-S["w4s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:24px;padding-bottom:360px">
+            f'<span class="mono" style="font-size:48px;color:#2E8FD1;white-space:nowrap;margin-left:20px">{date}</span></div>')
+S["w5s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:24px;padding-bottom:360px">
 <div class="tag">Calendario SRI · Noviembre</div>
-<h2 style="font-size:66px">Vencen <span class="hl">IVA y retenciones</span> de octubre</h2>
-{due("1","mar 10 nov")}
-{due("2","jue 12 nov")}
-{due("3","lun 16 nov","El 14 cae sábado: pasa al lunes")}
-{due("4","lun 16 nov")}
-{due("5","mié 18 nov")}
+<h2 style="font-size:66px">IVA y retenciones de octubre: <span class="hl">dígitos 6 al 0</span></h2>
+{due("6","vie 20 nov","Sin jornada (Decreto 507): declara antes")}
+{due("7","lun 23 nov","El 22 cae domingo: pasa al lunes")}
+{due("8","mar 24 nov")}
+{due("9","jue 26 nov")}
+{due("0","lun 30 nov","El 28 cae sábado: pasa al lunes")}
 <p class="lead" style="font-size:30px">Noveno dígito del RUC. Declarar tarde genera multas e intereses.</p>
 {foot("")}</div>"""
-S["w4s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+S["w5s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
 <div class="tag">Pregunta para gerentes</div>
-<h2 style="font-size:78px">¿Ya tienes provisionado el <span class="hl">décimo tercer sueldo</span> de tu equipo?</h2>
-<p class="lead">Se paga hasta el 24 de diciembre y se calcula con lo percibido del 1 de diciembre de 2025 al 30 de noviembre de 2026.</p>
+<h2 style="font-size:78px">¿Sabes qué gastos de tu empresa podría <span class="hl">objetar el SRI?</span></h2>
+<p class="lead">Un gasto sin comprobante válido o sin el medio de pago que exige la norma puede terminar en una glosa.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Conversemos por mensaje directo</div>
 {foot("", light=True)}</div>"""
-S["w4s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
-<div class="tag">Mito vs. realidad</div>
-<div style="background:rgba(255,255,255,.08);border-radius:26px;padding:36px 40px">
-<p class="mono" style="color:#8A8D91;font-size:28px;letter-spacing:.12em;margin-bottom:14px">MITO</p>
-<p style="font-family:M;font-weight:800;font-size:52px;line-height:1.2">“La contabilidad solo sirve para pagar impuestos.”</p></div>
+S["w5s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
+<div class="tag">¿Sabías que?</div>
+<h2 style="font-size:70px">Desde junio de 2026, tu declaración de IVA <span class="hl">solo vale si la pagas completa</span> al presentarla.</h2>
 <div style="background:#FDFEFF;color:#0B1F6E;border-radius:26px;padding:36px 40px">
-<p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">REALIDAD</p>
-<p style="font-family:M;font-weight:800;font-size:46px;line-height:1.25">Bien llevada, es la base para decidir: rentabilidad, flujo de caja y acceso a crédito.</p></div>
+<p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">QUÉ HACER</p>
+<p style="font-family:M;font-weight:800;font-size:44px;line-height:1.25">Ten el saldo disponible en la cuenta antes de declarar.</p></div>
+<p class="lead" style="font-size:28px">SRI · Resolución NAC-DGERCGC26-00000016</p>
 <div class="cta">{CTA}</div>
 {foot("")}</div>"""
-S["w4s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
-<div class="tag">Flujo de caja</div>
-<h2 style="font-size:86px">¿Sabes cuánta caja tendrás en <span class="hl">90 días?</span></h2>
-<p class="lead">Cómo armar un flujo de caja proyectado y qué pagos no olvidar.</p>
+S["w5s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+<div class="tag">Visión regional</div>
+<h2 style="font-size:80px">¿Operas en Ecuador, Perú o Colombia? <span class="hl">No pagues dos veces.</span></h2>
+<p class="lead">Qué es la Decisión 578 de la CAN y dónde tributa cada renta.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Míralo en el perfil</div>
 {foot("", light=True)}</div>"""
 
