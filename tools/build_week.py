@@ -48,55 +48,54 @@ def foot(right="DESLIZA →", light=False):
 def card(n,t,d,extra=""): return f'<div class="card" {extra}><div class="n">{n}</div><div><h3>{t}</h3><p>{d}</p></div></div>'
 CTA = "Envíanos tu RUC por mensaje directo"
 
-# ---------------- POSTS (1080x1350) · SEMANA 5 (04-nov) ----------------
+# ---------------- POSTS (1080x1350) · SEMANA 6 (11-nov) ----------------
 P = {}
-P["w5a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<div class="tag">Prevención tributaria</div>
-<h1 style="font-size:96px">¿Qué es una <span class="hl">glosa</span> del SRI?</h1>
-<p class="lead">Y por qué se previene en el registro de cada día, no cuando llega el control.</p>
+P["w6a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<div class="tag">Nómina · Provisiones</div>
+<h1 style="font-size:92px">Décimo cuarto sueldo: <span class="hl">dos regiones, dos calendarios</span></h1>
+<p class="lead">Lo que cambia entre Costa y Sierra, y por qué conviene provisionarlo cada mes.</p>
 {foot()}</div>"""
-P["w5a_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
-<div class="tag">En simple</div>
-<h2>Una diferencia que el SRI <span class="hl">determina</span> en tus declaraciones</h2>
-<p class="lead">Surge tras un proceso de control: un ingreso que no declaraste, un gasto que considera no deducible o un crédito tributario sin sustento.</p>
-<div class="card"><div class="n">=</div><div><h3>¿Qué implica?</h3><p>Impuesto adicional, intereses y posibles multas.</p></div></div>
+P["w6a_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
+<div class="tag">Qué es</div>
+<h2>Una bonificación anual equivalente a <span class="hl">un salario básico unificado</span></h2>
+<p class="lead">En 2026 el salario básico unificado es de USD 482. Si el trabajador no completó el período, se paga la parte proporcional.</p>
+<div class="card"><div class="n">÷</div><div><h3>Proporcional</h3><p>Salario básico ÷ 12 × meses trabajados en el período.</p></div></div>
 {foot(light=True)}</div>"""
-P["w5a_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
-<div class="tag">De dónde suelen salir</div>
-<h2 style="margin-bottom:6px">Cuatro orígenes <span class="hl">frecuentes</span></h2>
-{card("01","Gastos sin sustento","Sin comprobante válido o sin el medio de pago que exige la norma.")}
-{card("02","Cifras que no cuadran","ATS, declaraciones y contabilidad con valores distintos.")}
-{card("03","Retenciones mal aplicadas","No efectuadas, con porcentaje errado o sin declarar.")}
-{card("04","Ingresos no declarados","Detectados por cruces de información del SRI.")}
+P["w6a_3"] = f"""<div class="s light" style="gap:30px;justify-content:center">
+<div class="tag">Dos calendarios</div>
+<h2 style="margin-bottom:6px">Período y <span class="hl">fecha de pago</span></h2>
+{card("01","Costa y Galápagos","Período del 1 de marzo al último día de febrero. Se paga hasta el 15 de marzo.")}
+{card("02","Sierra y Amazonía","Período del 1 de agosto al 31 de julio. Se paga hasta el 15 de agosto.")}
+{card("→","Hoy","Si tienes personal en la Costa, ya corren meses del período que se paga en marzo.")}
 {foot(light=True)}</div>"""
-P["w5a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:80px">Una glosa se previene en el <span class="hl">día a día</span>, no en la respuesta al SRI.</h2>
+P["w6a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:80px">Lo que se provisiona cada mes <span class="hl">no sorprende</span> en el mes de pago.</h2>
 <p class="lead">Diagnóstico preventivo sin costo: reporte en 24 horas, solo con tu RUC y sin claves.</p>
 <div class="cta">{CTA}</div>
 {foot("GUARDA ESTE POST")}</div>"""
 
-P["w5b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:44px">
-<div class="tag">Visión regional · EC · PE · CO</div>
-<h1 style="font-size:84px">¿Tu empresa opera en Ecuador, Perú o Colombia?</h1>
-<p class="lead">La <b style="color:#5FE0E0">Decisión 578 de la CAN</b> evita que pagues dos veces impuesto por la misma renta.</p>
+P["w6b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:44px">
+<div class="tag">Sustento tributario</div>
+<h1 style="font-size:96px"><span class="hl">Siete años:</span> lo que tu empresa debe conservar</h1>
+<p class="lead">El plazo que fija el SRI para guardar tus comprobantes, y por qué es tu mejor defensa.</p>
 {foot()}</div>"""
-P["w5b_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
-<div class="tag">Qué es</div>
-<h2>El régimen andino contra la <span class="hl">doble tributación</span></h2>
-<p class="lead">Aplica entre los países miembros de la Comunidad Andina: Bolivia, Colombia, Ecuador y Perú.</p>
-<div class="card"><div class="n">→</div><div><h3>Regla general</h3><p>La renta tributa solo en el país donde se genera. El otro país la considera exonerada.</p></div></div>
+P["w6b_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
+<div class="tag">La norma</div>
+<h2>Los comprobantes se conservan <span class="hl">durante siete años</span></h2>
+<p class="lead">Lo establece el artículo 41 del Reglamento de Comprobantes de Venta, Retención y Documentos Complementarios.</p>
+<div class="card"><div class="n">@</div><div><h3>¿Y los electrónicos?</h3><p>Quien emite por medios electrónicos debe mantener el archivo digital de cada comprobante.</p></div></div>
 {foot(light=True)}</div>"""
-P["w5b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
-<div class="tag">Reglas que conviene conocer</div>
-<h2 style="margin-bottom:6px">¿Dónde <span class="hl">tributa</span> cada renta?</h2>
-{card("01","Dividendos","En el país donde está domiciliada la empresa que los distribuye.")}
-{card("02","Intereses","En el país donde se imputa y registra su pago.")}
-{card("03","Servicios personales","Incluida la consultoría: donde se prestaron.")}
-{card("04","Transporte","En el país donde está domiciliada la empresa.")}
+P["w6b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">Qué incluye</div>
+<h2 style="margin-bottom:6px">Documentos que <span class="hl">debes guardar</span></h2>
+{card("01","Facturas","Las que emites y las que recibes.")}
+{card("02","Liquidaciones de compra","De bienes y de prestación de servicios.")}
+{card("03","Notas de crédito y débito","Cada ajuste a una venta o compra.")}
+{card("04","Retenciones y guías de remisión","Comprobantes de retención y traslados de mercadería.")}
 {foot(light=True)}</div>"""
-P["w5b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:78px">Operar en la región es una oportunidad <span class="hl">si se planifica.</span></h2>
-<p class="lead">Revisa cada operación y su sustento antes de facturar o pagar entre países.</p>
+P["w6b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:78px">Un gasto sin sustento <span class="hl">no se defiende</span> ante un control.</h2>
+<p class="lead">Ordena y respalda cada comprobante hoy, no cuando el SRI lo pida.</p>
 <div class="cta">{CTA}</div>
 {foot("SÍGUENOS")}</div>"""
 
@@ -107,35 +106,32 @@ def due(d,date,note=""):
     return (f'<div style="background:#FDFEFF;border-radius:26px;padding:30px 36px;display:flex;justify-content:space-between;align-items:center">'
             f'<div><span style="font-size:32px;color:#5a5f68">Dígito <b class="mono" style="color:#0B1F6E;font-size:56px">{d}</b></span>{n}</div>'
             f'<span class="mono" style="font-size:48px;color:#2E8FD1;white-space:nowrap;margin-left:20px">{date}</span></div>')
-S["w5s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:24px;padding-bottom:360px">
-<div class="tag">Calendario SRI · Noviembre</div>
-<h2 style="font-size:66px">IVA y retenciones de octubre: <span class="hl">dígitos 6 al 0</span></h2>
-{due("6","vie 20 nov","Sin jornada (Decreto 507): declara antes")}
-{due("7","lun 23 nov","El 22 cae domingo: pasa al lunes")}
-{due("8","mar 24 nov")}
-{due("9","jue 26 nov")}
-{due("0","lun 30 nov","El 28 cae sábado: pasa al lunes")}
-<p class="lead" style="font-size:30px">Noveno dígito del RUC. Declarar tarde genera multas e intereses.</p>
+S["w6s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:28px;padding-bottom:360px">
+<div class="tag">Calendario SRI · Esta semana</div>
+<h2 style="font-size:70px">IVA y retenciones de octubre: <span class="hl">dígitos 2, 3 y 4</span></h2>
+{due("2","jue 12 nov")}
+{due("3","lun 16 nov","El 14 cae sábado: pasa al lunes")}
+{due("4","lun 16 nov")}
+<p class="lead" style="font-size:30px">Noveno dígito del RUC. Aunque no hayas tenido ventas, la declaración se presenta.</p>
 {foot("")}</div>"""
-S["w5s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+S["w6s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
 <div class="tag">Pregunta para gerentes</div>
-<h2 style="font-size:78px">¿Sabes qué gastos de tu empresa podría <span class="hl">objetar el SRI?</span></h2>
-<p class="lead">Un gasto sin comprobante válido o sin el medio de pago que exige la norma puede terminar en una glosa.</p>
+<h2 style="font-size:78px">Si hoy te pidieran una factura de compra de hace cinco años, <span class="hl">¿la encontrarías?</span></h2>
+<p class="lead">Los comprobantes se conservan durante siete años. Sin ellos, el gasto pierde su sustento.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Conversemos por mensaje directo</div>
 {foot("", light=True)}</div>"""
-S["w5s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
-<div class="tag">¿Sabías que?</div>
-<h2 style="font-size:70px">Desde junio de 2026, tu declaración de IVA <span class="hl">solo vale si la pagas completa</span> al presentarla.</h2>
+S["w6s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
+<div class="tag">Mito vs realidad</div>
+<h2 style="font-size:70px"><span style="text-decoration:line-through;text-decoration-color:#5FE0E0;opacity:.75">“El décimo cuarto se paga igual en todo el país.”</span></h2>
 <div style="background:#FDFEFF;color:#0B1F6E;border-radius:26px;padding:36px 40px">
-<p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">QUÉ HACER</p>
-<p style="font-family:M;font-weight:800;font-size:44px;line-height:1.25">Ten el saldo disponible en la cuenta antes de declarar.</p></div>
-<p class="lead" style="font-size:28px">SRI · Resolución NAC-DGERCGC26-00000016</p>
+<p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">REALIDAD</p>
+<p style="font-family:M;font-weight:800;font-size:44px;line-height:1.25">Costa y Galápagos pagan hasta el 15 de marzo. Sierra y Amazonía, hasta el 15 de agosto.</p></div>
 <div class="cta">{CTA}</div>
 {foot("")}</div>"""
-S["w5s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
-<div class="tag">Visión regional</div>
-<h2 style="font-size:80px">¿Operas en Ecuador, Perú o Colombia? <span class="hl">No pagues dos veces.</span></h2>
-<p class="lead">Qué es la Decisión 578 de la CAN y dónde tributa cada renta.</p>
+S["w6s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+<div class="tag">Sustento tributario</div>
+<h2 style="font-size:80px">Siete años: <span class="hl">lo que tu empresa debe conservar.</span></h2>
+<p class="lead">Qué comprobantes guardar y por qué son tu mejor defensa ante un control.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Míralo en el perfil</div>
 {foot("", light=True)}</div>"""
 
