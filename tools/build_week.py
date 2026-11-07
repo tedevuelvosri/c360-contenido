@@ -48,54 +48,55 @@ def foot(right="DESLIZA →", light=False):
 def card(n,t,d,extra=""): return f'<div class="card" {extra}><div class="n">{n}</div><div><h3>{t}</h3><p>{d}</p></div></div>'
 CTA = "Envíanos tu RUC por mensaje directo"
 
-# ---------------- POSTS (1080x1350) · SEMANA 6 (11-nov) ----------------
+# ---------------- POSTS (1080x1350) · SEMANA 7 (18-nov) ----------------
 P = {}
-P["w6a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<div class="tag">Nómina · Provisiones</div>
-<h1 style="font-size:92px">Décimo cuarto sueldo: <span class="hl">dos regiones, dos calendarios</span></h1>
-<p class="lead">Lo que cambia entre Costa y Sierra, y por qué conviene provisionarlo cada mes.</p>
+P["w7a_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<div class="tag">Cierre fiscal · Cartera</div>
+<h1 style="font-size:90px">Cuentas por cobrar viejas: <span class="hl">lo que la ley permite provisionar</span></h1>
+<p class="lead">Antes del 31 de diciembre, revisa tu cartera con criterio tributario.</p>
 {foot()}</div>"""
-P["w6a_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
-<div class="tag">Qué es</div>
-<h2>Una bonificación anual equivalente a <span class="hl">un salario básico unificado</span></h2>
-<p class="lead">En 2026 el salario básico unificado es de USD 482. Si el trabajador no completó el período, se paga la parte proporcional.</p>
-<div class="card"><div class="n">÷</div><div><h3>Proporcional</h3><p>Salario básico ÷ 12 × meses trabajados en el período.</p></div></div>
+P["w7a_2"] = f"""<div class="s light" style="gap:34px;justify-content:center">
+<div class="tag">La regla</div>
+<h2><span class="hl">1% anual</span> sobre los créditos comerciales del ejercicio</h2>
+<p class="lead">Los concedidos en el año y pendientes de cobro al cierre. La provisión acumulada no puede superar el 10% de la cartera total (art. 10, num. 11, LRTI).</p>
+<div class="card"><div class="n">≠</div><div><h3>No aplica</h3><p>A créditos concedidos a socios, sus cónyuges o parientes, ni a sociedades relacionadas.</p></div></div>
 {foot(light=True)}</div>"""
-P["w6a_3"] = f"""<div class="s light" style="gap:30px;justify-content:center">
-<div class="tag">Dos calendarios</div>
-<h2 style="margin-bottom:6px">Período y <span class="hl">fecha de pago</span></h2>
-{card("01","Costa y Galápagos","Período del 1 de marzo al último día de febrero. Se paga hasta el 15 de marzo.")}
-{card("02","Sierra y Amazonía","Período del 1 de agosto al 31 de julio. Se paga hasta el 15 de agosto.")}
-{card("→","Hoy","Si tienes personal en la Costa, ya corren meses del período que se paga en marzo.")}
+P["w7a_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">Cuándo dar de baja</div>
+<h2 style="margin-bottom:6px">Basta con <span class="hl">una</span> de estas condiciones</h2>
+{card("01","Dos años registrado","Constar como incobrable en la contabilidad durante dos años o más.")}
+{card("02","Tres años vencido","Más de tres años desde el vencimiento original del crédito.")}
+{card("03","Acción prescrita","Que haya prescrito la acción para cobrarlo.")}
+{card("04","Deudor insolvente","Quiebra o insolvencia del deudor, o sociedad deudora cancelada.")}
+<p style="font-size:24px;color:#8A8D91">Reglamento a la LRTI, art. 28, num. 3.</p>
 {foot(light=True)}</div>"""
-P["w6a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:80px">Lo que se provisiona cada mes <span class="hl">no sorprende</span> en el mes de pago.</h2>
+P["w7a_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:80px">La cartera se revisa antes del cierre, <span class="hl">no en la declaración.</span></h2>
 <p class="lead">Diagnóstico preventivo sin costo: reporte en 24 horas, solo con tu RUC y sin claves.</p>
 <div class="cta">{CTA}</div>
 {foot("GUARDA ESTE POST")}</div>"""
 
-P["w6b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:44px">
-<div class="tag">Sustento tributario</div>
-<h1 style="font-size:96px"><span class="hl">Siete años:</span> lo que tu empresa debe conservar</h1>
-<p class="lead">El plazo que fija el SRI para guardar tus comprobantes, y por qué es tu mejor defensa.</p>
+P["w7b_1"] = f"""<div class="s navy glow" style="justify-content:center;gap:44px">
+<div class="tag">Prevención · Control SRI</div>
+<h1 style="font-size:88px">Antes de una fiscalización: <span class="hl">4 preguntas</span> que tu contabilidad debe responder hoy</h1>
+<p class="lead">Lo que está ordenado hoy se entrega en horas.</p>
 {foot()}</div>"""
-P["w6b_2"] = f"""<div class="s light" style="gap:36px;justify-content:center">
-<div class="tag">La norma</div>
-<h2>Los comprobantes se conservan <span class="hl">durante siete años</span></h2>
-<p class="lead">Lo establece el artículo 41 del Reglamento de Comprobantes de Venta, Retención y Documentos Complementarios.</p>
-<div class="card"><div class="n">@</div><div><h3>¿Y los electrónicos?</h3><p>Quien emite por medios electrónicos debe mantener el archivo digital de cada comprobante.</p></div></div>
+P["w7b_2"] = f"""<div class="s light" style="gap:38px;justify-content:center">
+<div class="tag">Por qué</div>
+<h2>Una revisión se responde con <span class="hl">documentos</span>, no con explicaciones</h2>
+<p class="lead">Lo que no está ordenado se reconstruye después, con plazos cortos y bajo presión.</p>
+<div class="card"><div class="n">✓</div><div><h3>El objetivo</h3><p>Que cada cifra declarada tenga su respaldo listo para mostrarse.</p></div></div>
 {foot(light=True)}</div>"""
-P["w6b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
-<div class="tag">Qué incluye</div>
-<h2 style="margin-bottom:6px">Documentos que <span class="hl">debes guardar</span></h2>
-{card("01","Facturas","Las que emites y las que recibes.")}
-{card("02","Liquidaciones de compra","De bienes y de prestación de servicios.")}
-{card("03","Notas de crédito y débito","Cada ajuste a una venta o compra.")}
-{card("04","Retenciones y guías de remisión","Comprobantes de retención y traslados de mercadería.")}
+P["w7b_3"] = f"""<div class="s light tight" style="gap:22px;justify-content:center">
+<div class="tag">Las 4 preguntas</div>
+{card("01","¿Lo declarado cuadra?","IVA mensual, renta y estados financieros cuentan la misma historia.")}
+{card("02","¿Cada gasto se sostiene?","Comprobante válido, relación con el negocio y pago bancarizado sobre USD 500.")}
+{card("03","¿Las retenciones cuadran?","Las efectuadas, declaradas y pagadas; las recibidas, cruzadas con ingresos.")}
+{card("04","¿Hay un expediente por período?","Comprobantes, conciliaciones y anexos ordenados y fáciles de encontrar.")}
 {foot(light=True)}</div>"""
-P["w6b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
-<h2 style="font-size:78px">Un gasto sin sustento <span class="hl">no se defiende</span> ante un control.</h2>
-<p class="lead">Ordena y respalda cada comprobante hoy, no cuando el SRI lo pida.</p>
+P["w7b_4"] = f"""<div class="s navy glow" style="justify-content:center;gap:48px">
+<h2 style="font-size:78px">La mejor defensa se prepara <span class="hl">antes</span> del requerimiento.</h2>
+<p class="lead">Revisamos tu situación con una mirada preventiva, sin pedirte claves.</p>
 <div class="cta">{CTA}</div>
 {foot("SÍGUENOS")}</div>"""
 
@@ -106,32 +107,32 @@ def due(d,date,note=""):
     return (f'<div style="background:#FDFEFF;border-radius:26px;padding:30px 36px;display:flex;justify-content:space-between;align-items:center">'
             f'<div><span style="font-size:32px;color:#5a5f68">Dígito <b class="mono" style="color:#0B1F6E;font-size:56px">{d}</b></span>{n}</div>'
             f'<span class="mono" style="font-size:48px;color:#2E8FD1;white-space:nowrap;margin-left:20px">{date}</span></div>')
-S["w6s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:28px;padding-bottom:360px">
+S["w7s1"] = f"""<div class="s navy glow" style="justify-content:center;gap:28px;padding-bottom:360px">
 <div class="tag">Calendario SRI · Esta semana</div>
-<h2 style="font-size:70px">IVA y retenciones de octubre: <span class="hl">dígitos 2, 3 y 4</span></h2>
-{due("2","jue 12 nov")}
-{due("3","lun 16 nov","El 14 cae sábado: pasa al lunes")}
-{due("4","lun 16 nov")}
-<p class="lead" style="font-size:30px">Noveno dígito del RUC. Aunque no hayas tenido ventas, la declaración se presenta.</p>
+<h2 style="font-size:70px">IVA y retenciones de octubre: <span class="hl">dígitos 6, 7 y 8</span></h2>
+{due("6","vie 20 nov","Jornada suspendida (Decreto 507): declara antes")}
+{due("7","lun 23 nov","El 22 cae domingo: pasa al lunes")}
+{due("8","mar 24 nov")}
+<p class="lead" style="font-size:30px">Noveno dígito del RUC. No dejes la declaración para el último día.</p>
 {foot("")}</div>"""
-S["w6s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+S["w7s2"] = f"""<div class="s light" style="justify-content:center;gap:50px">
 <div class="tag">Pregunta para gerentes</div>
-<h2 style="font-size:78px">Si hoy te pidieran una factura de compra de hace cinco años, <span class="hl">¿la encontrarías?</span></h2>
-<p class="lead">Los comprobantes se conservan durante siete años. Sin ellos, el gasto pierde su sustento.</p>
+<h2 style="font-size:78px">¿Cuánto de tu cartera lleva <span class="hl">más de un año sin cobrarse?</span></h2>
+<p class="lead">Antes del cierre, revisa qué se puede provisionar y qué ya debería darse de baja.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Conversemos por mensaje directo</div>
 {foot("", light=True)}</div>"""
-S["w6s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
+S["w7s3"] = f"""<div class="s navy glow" style="justify-content:center;gap:40px">
 <div class="tag">Mito vs realidad</div>
-<h2 style="font-size:70px"><span style="text-decoration:line-through;text-decoration-color:#5FE0E0;opacity:.75">“El décimo cuarto se paga igual en todo el país.”</span></h2>
+<h2 style="font-size:66px"><span style="text-decoration:line-through;text-decoration-color:#5FE0E0;opacity:.75">“Si tengo la factura, el gasto es deducible aunque lo pague en efectivo.”</span></h2>
 <div style="background:#FDFEFF;color:#0B1F6E;border-radius:26px;padding:36px 40px">
 <p class="mono" style="color:#2E8FD1;font-size:28px;letter-spacing:.12em;margin-bottom:14px">REALIDAD</p>
-<p style="font-family:M;font-weight:800;font-size:44px;line-height:1.25">Costa y Galápagos pagan hasta el 15 de marzo. Sierra y Amazonía, hasta el 15 de agosto.</p></div>
+<p style="font-family:M;font-weight:800;font-size:42px;line-height:1.25">Sobre USD 500, el pago debe pasar por el sistema financiero para deducir el gasto y usar el crédito tributario de IVA.</p></div>
 <div class="cta">{CTA}</div>
 {foot("")}</div>"""
-S["w6s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
-<div class="tag">Sustento tributario</div>
-<h2 style="font-size:80px">Siete años: <span class="hl">lo que tu empresa debe conservar.</span></h2>
-<p class="lead">Qué comprobantes guardar y por qué son tu mejor defensa ante un control.</p>
+S["w7s4"] = f"""<div class="s light" style="justify-content:center;gap:50px">
+<div class="tag">Prevención · Control SRI</div>
+<h2 style="font-size:78px">Antes de una fiscalización: <span class="hl">4 preguntas que tu contabilidad debe responder hoy.</span></h2>
+<p class="lead">Una revisión se responde con documentos, no con explicaciones.</p>
 <div class="cta" style="background:#0B1F6E;color:#FDFEFF">Míralo en el perfil</div>
 {foot("", light=True)}</div>"""
 

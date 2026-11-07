@@ -8,12 +8,12 @@ FPS=30; DUR=24
 # scenes: (start,end,html)
 def sc(a,b,html): return f'<div class="scene" style="--a:{a}s;--d:{b-a}s">{html}</div>'
 SC = [
- sc(0,4.2,'<div class="tag">Cumplimiento SRI</div><h1 style="font-size:92px">Un mes sin ventas <span class="hl">no es un mes sin obligaciones</span></h1>'),
- sc(4.2,8.4,'<div class="num">01</div><h2 style="font-size:78px">La declaración de IVA <span class="hl">se presenta igual</span></h2><p class="lead">Aunque en el período no haya ventas, compras ni retenciones.</p>'),
- sc(8.4,12.4,'<div class="num">02</div><h2 style="font-size:80px">Se declara <span class="hl">en cero</span>, dentro del plazo</h2><p class="lead">Según el noveno dígito de tu RUC.</p>'),
- sc(12.4,16.2,'<div class="num">03</div><h2 style="font-size:80px">Tarde también tiene <span class="hl">multa</span></h2><p class="lead">Las sanciones por presentación tardía aplican también a declaraciones en cero.</p>'),
- sc(16.2,19,'<h2 style="font-size:84px">Sin movimiento no significa <span class="hl">sin riesgo.</span></h2>'),
- sc(19,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus obligaciones en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
+ sc(0,4.2,'<div class="tag">Bancarización</div><h1 style="font-size:90px">Más de USD 500 en efectivo: <span class="hl">un gasto que el SRI no reconoce</span></h1>'),
+ sc(4.2,8.4,'<div class="num">01</div><h2 style="font-size:78px">Sobre USD 500, el pago <span class="hl">pasa por el sistema financiero</span></h2><p class="lead">Lo exige el artículo 103 de la Ley de Régimen Tributario Interno.</p>'),
+ sc(8.4,12.6,'<div class="num">02</div><h2 style="font-size:78px">Si no, pierdes la <span class="hl">deducción</span> y el crédito tributario de IVA</h2><p class="lead">La factura sola no basta para efectos tributarios.</p>'),
+ sc(12.6,16.6,'<div class="num">03</div><h2 style="font-size:80px">Se mide por operación, <span class="hl">no por pago</span></h2><p class="lead">Si la compra supera USD 500, cada cuota se bancariza, aunque sea pequeña.</p>'),
+ sc(16.6,19.4,'<h2 style="font-size:80px">Transferencia, tarjeta, cheque o pago electrónico: <span class="hl">deja rastro.</span></h2>'),
+ sc(19.4,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus obligaciones en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
 ]
 EXTRA = """
 .scene{position:absolute;inset:0;padding:300px 80px 340px;display:flex;flex-direction:column;justify-content:center;gap:48px;opacity:0;z-index:1;
@@ -47,6 +47,6 @@ async def main():
         await b.close()
     subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate",str(FPS),"-i",str(out/"f%04d.png"),
       "-f","lavfi","-i","anullsrc=r=44100:cl=stereo","-shortest","-c:v","libx264","-pix_fmt","yuv420p","-crf","20",
-      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r5.mp4")],check=True)
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r5.mp4"),"-frames:v","1",str(ROOT/"out"/"r5_cover.jpg")])
+      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r6.mp4")],check=True)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r6.mp4"),"-frames:v","1",str(ROOT/"out"/"r6_cover.jpg")])
 asyncio.run(main())
