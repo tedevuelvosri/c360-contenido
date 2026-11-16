@@ -1,6 +1,6 @@
 # Contabilidad360 · Playbook de contenido semanal
 
-Instrucciones para la sesión que crea y programa cada semana el contenido de Instagram (@contabilidad360ec) y LinkedIn (perfil personal de la socia fundadora) vía Metricool.
+Instrucciones para la sesión que crea y programa cada semana el contenido de Instagram (@contabilidad360ec) vía Metricool. LinkedIn ya no se usa.
 
 ## Cuentas y herramientas
 - Metricool blogId **7284119**, zona horaria **America/Guayaquil**. Redes conectadas: Instagram y LinkedIn (perfil personal de la fundadora).
@@ -11,18 +11,20 @@ Instrucciones para la sesión que crea y programa cada semana el contenido de In
 - Playwright y ffmpeg están instalados. Siempre revisar visualmente cada imagen (que nada se salga ni pise el pie de página) antes de publicar.
 
 ## Límite de Metricool (plan gratuito): 20 publicaciones al mes
-- Metricool gratis permite **20 publicaciones publicadas por mes natural**, sumando Instagram y LinkedIn (una misma pieza en dos redes cuenta 2). Las historias cuentan. Las publicaciones que fallan no cuentan. Se reinicia el día 1.
+- Metricool gratis permite **20 publicaciones publicadas por mes natural**, (una misma pieza en dos redes cuenta 2). Las historias cuentan. Las publicaciones que fallan no cuentan. Se reinicia el día 1.
 - Antes de programar, contar con `getScheduledPosts` todo lo **publicado o pendiente no borrador** del mes natural y no pasar de **19** (1 de margen).
 - Una semana que cruza de mes cuenta para cada mes según la fecha de cada pieza.
 
-## Cadencia (semana de miércoles a martes) — 4 publicaciones por semana
-| Día | Instagram | LinkedIn |
-|---|---|---|
-| Miércoles | 10:00 Reel | — |
-| Jueves | 10:00 Historia (calendario SRI de la semana o recordatorio clave) | — |
-| Lunes | 10:00 Carrusel (4-5 láminas) | 08:40 mismo carrusel como documento PDF, texto en primera persona |
+## Cadencia (semana de miércoles a martes) — 4 publicaciones por semana, solo Instagram
+**LinkedIn ya no se usa (decisión de Camilo, 16-nov-2026): no programar nada en LinkedIn.**
+| Día | Instagram |
+|---|---|
+| Miércoles | 10:00 Reel |
+| Jueves | 10:00 Historia (calendario SRI de la semana o recordatorio clave) |
+| Sábado | 11:00 Historia (pregunta, mito o adelanto del carrusel del lunes) |
+| Lunes | 10:00 Carrusel (4-5 láminas) |
 
-En un mes con 5 lunes, 5 miércoles y 5 jueves se llega a 20: en ese caso se omite la historia de la última semana. Si LinkedIn sigue con error de conexión, no se programa LinkedIn (no consume cupo) y se avisa a Camilo.
+En un mes con 5 semanas se puede llegar a 20: en ese caso se omite la historia del sábado de la última semana.
 
 Metricool: Instagram `instagramData.type` = REEL / POST / STORY, `autoPublish: true`. Historias sin texto. Reel con `videoThumbnailUrl` (portada JPG). LinkedIn: carruseles con `linkedinData.publishImagesAsPDF: true` y `documentTitle`. No hay herramienta para borrar: para frenar algo, `updateScheduledPost` con `draft: true` y el contenido completo.
 
