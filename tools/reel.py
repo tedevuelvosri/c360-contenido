@@ -8,12 +8,12 @@ FPS=30; DUR=24
 # scenes: (start,end,html)
 def sc(a,b,html): return f'<div class="scene" style="--a:{a}s;--d:{b-a}s">{html}</div>'
 SC = [
- sc(0,4.2,'<div class="tag">Cierre contable · Inventarios</div><h1 style="font-size:90px">Tu inventario en libros <span class="hl">no siempre es el que hay en bodega</span></h1>'),
- sc(4.2,8.4,'<div class="num">01</div><h2 style="font-size:78px">Antes del 31 de diciembre, <span class="hl">cuenta lo que tienes</span></h2><p class="lead">Una toma física, contrastada contra el kárdex y los registros contables.</p>'),
- sc(8.4,12.6,'<div class="num">02</div><h2 style="font-size:78px">Cada diferencia <span class="hl">se investiga y se documenta</span></h2><p class="lead">Faltantes, sobrantes y errores de registro, con acta y responsables.</p>'),
- sc(12.6,16.6,'<div class="num">03</div><h2 style="font-size:76px">Se mide al menor entre <span class="hl">costo y valor neto realizable</span></h2><p class="lead">Lo obsoleto, dañado o de lenta rotación no vale lo que dice el libro (NIIF).</p>'),
- sc(16.6,19.4,'<h2 style="font-size:80px">Un inventario inflado <span class="hl">te hace decidir mal:</span> precios, compras y crédito.</h2>'),
- sc(19.4,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus obligaciones en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
+ sc(0,4.2,'<div class="tag">Facturación · Transporte 2027</div><h1 style="font-size:84px">¿Contratas transporte de carga o de personal? <span class="hl">Tus facturas cambian en enero</span></h1>'),
+ sc(4.2,8.4,'<div class="num">01</div><h2 style="font-size:74px">Hasta el 31 de diciembre de 2026, <span class="hl">el socio aún puede facturarte</span></h2><p class="lead">Es el régimen transitorio de la Resolución NAC-DGERCGC26-00000028 del SRI.</p>'),
+ sc(8.4,12.6,'<div class="num">02</div><h2 style="font-size:74px">Desde el 1 de enero de 2027, <span class="hl">te factura la operadora</span></h2><p class="lead">El socio factura solo a su operadora. La factura al cliente incluye la placa del vehículo.</p>'),
+ sc(12.6,16.6,'<div class="num">03</div><h2 style="font-size:66px">Carga pesada y liviana, escolar e institucional, turístico, <span class="hl">mixto y alternativo-excepcional</span></h2><p class="lead">No aplica a taxis.</p>'),
+ sc(16.6,19.8,'<h2 style="font-size:76px">El gasto se sustenta <span class="hl">con factura de la operadora.</span></h2><p class="lead">Revisa a tus proveedores de transporte antes de enero (Res. NAC-DGERCGC26-00000024).</p>'),
+ sc(19.8,24,f'<img src="{A}/sym_white.png" style="width:200px"><div class="tag">Diagnóstico preventivo</div><h2 style="font-size:80px">Revisamos tus obligaciones en <span class="hl">24 horas.</span></h2><p class="lead">Solo con tu RUC. Sin claves. Sin costo.</p><div class="cta">Envíanos tu RUC por mensaje directo</div>'),
 ]
 EXTRA = """
 .scene{position:absolute;inset:0;padding:300px 80px 340px;display:flex;flex-direction:column;justify-content:center;gap:48px;opacity:0;z-index:1;
@@ -47,6 +47,6 @@ async def main():
         await b.close()
     subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate",str(FPS),"-i",str(out/"f%04d.png"),
       "-f","lavfi","-i","anullsrc=r=44100:cl=stereo","-shortest","-c:v","libx264","-pix_fmt","yuv420p","-crf","20",
-      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r7.mp4")],check=True)
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r7.mp4"),"-frames:v","1",str(ROOT/"out"/"r7_cover.jpg")])
+      "-c:a","aac","-movflags","+faststart",str(ROOT/"out"/"r8.mp4")],check=True)
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss","3.5","-i",str(ROOT/"out"/"r8.mp4"),"-frames:v","1",str(ROOT/"out"/"r8_cover.jpg")])
 asyncio.run(main())
